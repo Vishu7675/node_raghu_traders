@@ -9,6 +9,6 @@ app.use(express.json());
 app.use("/api/contacts", require("./routes/contactRoutes"));
 app.use("/api/user", require("./routes/userRoutes"));
 app.use(errorHandler);
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on http://localhost:${process.env.PORT}`);
+app.listen(8080, "0.0.0.0", () => {
+  console.log("Server is running on port 8080");
 });
